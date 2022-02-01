@@ -1,0 +1,295 @@
+:root{
+    cursor: auto;
+    color: white;
+}
+
+::selection{
+    background-color: rgba(255, 255, 255, 0);
+    color: #6dbff7;
+}
+
+body {
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Curseur */
+
+.curseur{
+    z-index: 101;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    backdrop-filter: brightness(250%);
+    transition: all 3 ease;
+    transition-property: bacground, transform;
+  }
+
+.img {
+    cursor: none;
+    margin-left: 10%;
+    border-radius: 50px;
+    height: 75%;  
+    box-shadow: rgba(48, 48, 48, 0.8) 0px 0 10px;
+    animation: floating 6s ease-in-out 0s infinite;
+
+}
+
+/*Image qui flotte*/ 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+} 
+
+@keyframes floating{
+
+    0%{
+        transform: translateY(0px);
+    
+    }
+
+    25%{
+        transform: translateY(-7px);
+
+    }
+    
+    50%{
+        transform: translateY(0px);
+
+    }
+
+    75%{
+        transform: translateY(-7px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+.card1 {
+    display: flex;
+    float: left;
+    max-width: 80vh;
+    max-height: 80vh;
+}
+
+.title-left {
+    float: left;
+    margin-left: 5vw;
+}
+
+.card2 {
+    margin-top: 20vh;
+    margin-left: 40%;
+}
+
+.title-right {
+    margin: auto;
+    max-width: 80vh;
+}
+
+.arrow {
+    position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    margin-top: 2vh;
+    left: 50%;
+    animation: floating 6s ease-in-out 0s infinite;
+}
+
+
+
+.s1 {
+    background-image: url("./images/background\ site\ web.jpg");
+    background-size: cover;
+
+}
+
+.s2 {
+    background-image: url("./images/pleine\ lune\ flou\ \(noir\).png");
+    background-size: cover;
+}
+
+
+.s3 {
+    background-image: url("./images/phénix\ flou.png");
+    background-size: cover;
+}
+
+.s4 {
+    background-image: url("./images/basketball\ flou.png");
+    background-size: cover;
+} 
+
+.s5 {
+    background-image: url("./images/musique\ collage\ flou.jpg");
+    background-size: cover;
+} 
+
+.s6 {
+    background-image: url("./images/rocky\ flou.png");
+    background-size: cover;
+} 
+
+.s7 {
+    background-image: url("./images/bad\ flou.png");
+    background-size: cover;
+} 
+
+.s8 {
+    background-image: url("./images/rilès\ flou.png");
+    background-size: cover;
+}
+
+.section h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12vh;
+    text-align: center;
+    margin-top: 8vh;
+    color: white;
+    text-shadow: #2121212c 0px 2px 0px;
+    letter-spacing: 0.15rem;
+    transition: 2s;
+    animation: neon 12s infinite;
+    -webkit-animation: neon 12s infinite;
+    
+}
+
+.section h2{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 3.5em;
+    margin-left: 5vw;
+    color: white;
+    text-shadow: #2121212c 0px 2px 0px;
+    transition: 2s;
+    animation: neon 12s infinite;
+    -webkit-animation: neon 12s infinite;
+    margin-top: 0;
+    
+}
+
+h3{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 11vh;
+    color: white;
+    text-shadow: #2121212c 0px 2px 0px;
+    transition: 2s;
+    animation: neon 12s infinite;
+    -webkit-animation: neon 12s infinite;
+    
+}
+
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+
+      
+}
+
+
+form {
+    font-family: 'Lexend Deca', sans-serif;    
+    background-color: rgba(243, 130, 65, 0.404);
+    padding: 2.5rem;
+    margin-left: 60vw;
+    border-radius: 10px;
+    height: 20vh;
+    width: 33%;
+    max-width: 100vh;
+
+}
+
+
+.popupimg-invisible {
+    display: none;
+}
+
+.popupimg {
+    z-index: 21;
+    color: black;
+    padding: 3rem;
+    background-color: rgba(148, 215, 247, 0.938);;
+    font-size: 1.2em;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25vh;
+    width: 70%;
+    border: solid rgba(58, 98, 150, 0.199) 6px;
+    border-radius: 25px;
+}
+
+.popupimg-close {
+    position: absolute;
+    right: 1.5vw;
+    top: 0.5vh;
+    font-size: 2.2rem;
+}
+
+.popupimg-close:hover {
+    cursor: pointer;
+}
+
+.btn-popupimg {
+    position: absolute;
+    left: 2vw;
+    top: 3vh;
+    height: 10vh;
+    opacity: 8%;
+    transition: 0.5s;
+    animation: float 6s ease-in-out infinite;
+}
+
+.btn-popupimg:hover {
+    cursor: pointer;
+    opacity: 16%;
+    transition: 0.5s;
+}
+
+
+
+/* mentions légales*/
+h4{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.6em;
+    text-align: center;
+    margin-top: 1.5%;
+    color: white;
+    transition: 2s;
+    animation: neon 12s infinite;
+    -webkit-animation: neon 12s infinite;
+    
+}
+
+.volet-visible{
+    background-color: rgba(173, 216, 230, 0.555);
+    height: 12em;
+    overflow:hidden;
+
+}
+
+.volet-invisible{
+    background-color: rgba(173, 216, 230, 0.555);
+    height: 8.2vh;
+    overflow:hidden;
+
+}
+
+
